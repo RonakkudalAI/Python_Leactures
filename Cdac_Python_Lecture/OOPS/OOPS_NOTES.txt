@@ -1,0 +1,92 @@
+'''
+OOPS in Python
+Object oriented Programming 
+It is a Programming Paradigm that organizs program using classes and objects.
+Insted of writing programs as a proceduree,OOP organize Software into objects that contain both data and behaviour.
+
+Class:
+-class is a blueprint or template for creating objects. We can think of a class as a recipe: 
+it describes what an object will look like (its attributes) and what it can do (its methods),
+but it is not the object itself.
+A bluePrint or template used to create objects.
+It defines:
+    Variables.
+    Methods.
+    Behaviors of the concepts.
+
+Syntax- 
+
+class Cake:
+    pass
+
+Objects: 
+An Object is an instance of class.It represent Real world Entities.
+
+Syntax-:
+
+    object_name = Classname()
+    
+EX-- Laptops: Real entity that exists.
+    Each Object is Instance of Class.
+    Each Object is Independent.
+    Objects Have Properties.
+    Each Object is Occupy Memories.
+
+
+
+Advantages:
+---------------------------------------
+1. Code Reusability:
+ - Classes can be reused using Inheritance.
+
+2. Modularity:
+ - Programs Can be divided into small Parts
+
+3. Security:
+ -  Data hiding can be Implemented using encapsulation.
+
+4.Flexibility: 
+ Support Polymorphims.
+
+5.Easy Maintence:
+ - Code Becomes Easy to update and management.
+
+6.Real World Modelling:
+- Prrogram resemble the real world objectswhich provides real time solutions.
+
+Why OOPS IS Required:
+
+
+
+
+-Object-Oriented Programming (OOP) is used to organize and manage code efficiently.
+
+If we do not use OOP concepts, the program becomes difficult to manage because:
+
+Data redundancy increases – the same data may be repeated in many places.
+
+Code duplication occurs – we may need to write the same code multiple times.
+
+Maintenance becomes difficult – making changes in large programs is harder.
+
+Reusability is limited – code cannot be reused easily.
+
+Using OOP concepts like Encapsulation, Inheritance, Polymorphism, and Abstraction helps to:
+
+Reuse code (Inheritance)
+
+Reduce redundancy
+
+Improve code organization
+
+Make programs easier to maintain and extend
+
+Provide better data security
+
+✅ Therefore, OOP makes programs modular, reusable, and easy to manage.
+
+
+
+
+
+'''

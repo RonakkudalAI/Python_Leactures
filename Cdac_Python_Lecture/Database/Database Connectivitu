@@ -1,0 +1,92 @@
+import mysql.connector
+
+# Connect
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Ronak",
+    database="placement_db"   # ✅ your DB
+)
+
+cursor = conn.cursor()
+
+# Create Student Table
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Student(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    course VARCHAR(100),
+    cgpa FLOAT
+)
+""")
+
+# Menu
+while True:
+    print("\n===== STUDENT PLACEMENT SYSTEM =====")
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Update Student")
+    print("4. Delete Student")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    # ✅ INSERT
+    if choice == 1:
+        name = input("Enter Name: ")
+        course = input("Enter Course: ")
+        cgpa = float(input("Enter CGPA: "))
+
+        query = "INSERT INTO Student (name, course, cgpa) VALUES (%s, %s, %s)"
+        values = (name, course, cgpa)
+
+        cursor.execute(query, values)
+        conn.commit()
+
+        print("✅ Student Added!")
+
+    # ✅ READ
+    elif choice == 2:
+        cursor.execute("SELECT * FROM Student")
+        data = cursor.fetchall()
+
+        print("\n📚 Student List:")
+        for row in data:
+            print(row)
+
+    # ✅ UPDATE
+    elif choice == 3:
+        sid = int(input("Enter Student ID to update: "))
+        cgpa = float(input("Enter new CGPA: "))
+
+        query = "UPDATE Student SET cgpa = %s WHERE id = %s"
+        values = (cgpa, sid)
+
+        cursor.execute(query, values)
+        conn.commit()
+
+        print("✅ Student Updated!")
+
+    # ✅ DELETE
+    elif choice == 4:
+        sid = int(input("Enter Student ID to delete: "))
+
+        query = "DELETE FROM Student WHERE id = %s"
+        values = (sid,)
+
+        cursor.execute(query, values)
+        conn.commit()
+
+        print("✅ Student Deleted!")
+
+    # ✅ EXIT
+    elif choice == 5:
+        print("Exiting program...")
+        break
+
+    else:
+        print("❌ Invalid choice!")
+
+# Close
+cursor.close()
+conn.close()

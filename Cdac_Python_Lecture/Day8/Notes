@@ -1,0 +1,9 @@
+Topic--Covered--
+When one exception is raise while handling another exception.
+It helps to preserve the original error context.
+It can be implemented using the keywords:
+    raise.....from...........
+
+Chaing exception
+Custom exception
+File handling

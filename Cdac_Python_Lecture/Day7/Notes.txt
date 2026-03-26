@@ -1,0 +1,13 @@
+
+
+
+key pointer to use magic methods:
+To initialize objects 
+To print objects in a readable form 
+To use Operators, like +,-,==
+To use Built-in functions like len(),max()
+To Support Indexing like obj[0]
+
+Ex:
+def __str__(Self)
+    return "Result = " +self.name
